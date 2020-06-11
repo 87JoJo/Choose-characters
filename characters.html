@@ -1,0 +1,112 @@
+<!doctype html>
+<!-- lang代表網頁主要語言,如果有設對於搜尋引擎是友善的,對於瀏覽器在判斷是有幫助的 -->
+<html lang="zh-Hant-TW">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- 讓網頁響應式(RWD)設置生效 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./../style/characters.css">
+    <title>hello</title>
+</head>
+
+<body>
+    <!-- 功能可選擇三個角色(ajax去抓角色資料)，移動上去會明亮，選擇完角色後可以給它配點，
+    點完以後js去計算，根據你的配點，這位角色的定位(法師、戰士、刺客、獵人、廢物)
+    -->
+    <div class="container">
+        <div class="title-area3">
+            <div class="title-3">
+                <p>Choose your characters</p>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="character Eva">
+                <img src="./../img/eva.png" alt="">
+                <div class="name">
+                    <p>Eva</p>
+                </div>
+            </div>
+            <div class="character JoJo">
+                <img src="./../img/jojo.png" alt="">
+                <div class="name">
+                    <p>JoJo</p>
+                </div>
+            </div>
+            <div class="character Bogi">
+                <img src="./../img/bogi.png" alt="">
+                <div class="name">
+                    <p>Bogi</p>
+                </div>
+            </div>
+            <div class="detail">
+                <div class="introduce">
+                    <p></p>
+                </div>
+                <div class="skill">
+                    <ul>
+                        <li class="skillTotal">
+                            <p>You still have<span></span>points</p>
+                        </li>
+                        <li>
+                            <p>STR</p>
+                            <div class="skillPoints">
+                                <span class="minus">-</span>
+                                <p>0</p>
+                                <span class="pluse">+</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>DEX</p>
+                            <div class="skillPoints">
+                                <span class="minus">-</span>
+                                <p>0</p>
+                                <span class="pluse">+</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>INT</p>
+                            <div class="skillPoints">
+                                <span class="minus">-</span>
+                                <p>0</p>
+                                <span class="pluse">+</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>LUK</p>
+                            <div class="skillPoints">
+                                <span class="minus">-</span>
+                                <p>0</p>
+                                <span class="pluse">+</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="back">
+                <a href="./index.html">Back</a>
+            </div>
+            <div class="submit">
+                <a href="javascript:;">OK</a>
+            </div>
+        </div>
+        <div class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Role info</h2>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./../js/characters.js">
+</script>
+
+</html>
