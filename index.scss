@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+}
+
+$forest:#2b580c;
+$grayp:#e3d9ca;
+$bk:#1b1919;
+
+// 字體樣式
+%fontStyle {
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+// 主軸置中
+%xMiddle {
+    display: flex;
+    justify-content: center;
+}
+
+// 次軸置中
+%yMiddle {
+    display: flex;
+    align-items: center;
+}
+
+// 全置中
+%allMiddle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: rgba($forest, 0.6);
+    height: 90rem;
+    width: 100%;
+
+    .title-area1,
+    .title-area2 {
+        height: 20rem;
+        width: 100%;
+        @extend %allMiddle;
+        flex-direction: row;
+
+        .title-1,
+        .title-2 {
+            @extend %allMiddle;
+            height: 10rem;
+            width: 100%;
+            position: absolute;
+
+            p {
+                @extend %fontStyle;
+                color: $bk;
+            }
+
+            a {
+                @extend %fontStyle;
+                text-decoration: none;
+                color: $grayp;
+            }
+        }
+
+        .title-1 {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(5rem);
+            transition: all 2s ease-in-out;
+        }
+
+        .title-1.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0rem);
+        }
+
+        .title-2 {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .title-2.show {
+            width: 30%;
+            border-radius: 1rem;
+            border: 1px solid $forest;
+            background-color: rgba($forest, 0.6);
+            opacity: 0.6;
+            animation: moveY 2s alternate;
+            transition: all ease-in 0.5s;
+            visibility: visible;
+            transform: translateY(0rem);
+        }
+
+        .title-2.show:hover {
+            background-color: rgba($forest, 0.8);
+        }
+
+        @keyframes moveY {
+            0% {
+                visibility: visible;
+                width: 80%;
+                transform: translateY(10rem);
+            }
+
+            100% {
+                visibility: visible;
+                width: 30%;
+                transform: translateY(0rem);
+            }
+        }
+    }
+
+    .bg {
+        @extend %allMiddle;
+        z-index: 100;
+        background-image: url(./../img/forest.png);
+        height: 50rem;
+        /* 固定背景圖片位置 */
+        background-position: 0px 10rem;
+        background-repeat: no-repeat;
+        width: 100%;
+        /* 可使背景圖放大(用於小圖要看全景) */
+        /* background-size: cover; */
+
+        /* 可使背景圖縮小(用於大圖要看全景) */
+        /* background-size: contain; */
+
+        /* 自定義背景圖片size */
+        background-size: 100% auto;
+
+        /* 將背景圖片固定 */
+        background-attachment: fixed;
+    }
+
+
+}
