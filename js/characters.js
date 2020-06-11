@@ -42,7 +42,7 @@
     }
     let req = new XMLHttpRequest();
     req.addEventListener('load', reqHandler);
-    req.open('GET', './../data/character.json', true);
+    req.open('GET', './data/character.json', true);
     req.send();
 
     // 過濾資料
